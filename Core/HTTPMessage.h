@@ -9,8 +9,8 @@
   #import <CFNetwork/CFNetwork.h>
 #endif
 
-#define HTTPVersion1_0  ((NSString *)kCFHTTPVersion1_0)
-#define HTTPVersion1_1  ((NSString *)kCFHTTPVersion1_1)
+#define HTTPVersion1_0  ((__bridge NSString *)kCFHTTPVersion1_0)
+#define HTTPVersion1_1  ((__bridge NSString *)kCFHTTPVersion1_1)
 
 
 @interface HTTPMessage : NSObject

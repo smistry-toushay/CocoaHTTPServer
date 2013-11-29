@@ -640,14 +640,14 @@ static NSMutableArray *recentNonces;
 			
 			// Configure this connection as the server
 			[settings setObject:[NSNumber numberWithBool:YES]
-						 forKey:(NSString *)kCFStreamSSLIsServer];
+						 forKey:(__bridge NSString *)kCFStreamSSLIsServer];
 			
 			[settings setObject:certificates
-						 forKey:(NSString *)kCFStreamSSLCertificates];
+						 forKey:(__bridge NSString *)kCFStreamSSLCertificates];
 			
 			// Configure this connection to use the highest possible SSL level
-			[settings setObject:(NSString *)kCFStreamSocketSecurityLevelNegotiatedSSL
-						 forKey:(NSString *)kCFStreamSSLLevel];
+			[settings setObject:(__bridge NSString *)kCFStreamSocketSecurityLevelNegotiatedSSL
+						 forKey:(__bridge NSString *)kCFStreamSSLLevel];
 			
 			[asyncSocket startTLS:settings];
 		}
